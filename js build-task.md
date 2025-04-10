@@ -120,13 +120,6 @@ Your JavaScript application is now successfully built and deployed on your Ubunt
 
 You can access your application by entering your server's IP address or domain name in a web browser: 
 
-cpp 
-
-Copy 
-
-http://<your-server-ip> 
- 
-
 This setup is ideal for deploying single-page applications (SPAs) like those built with React, Vue, or Angular, using Apache as a simple static file server..
 
  
