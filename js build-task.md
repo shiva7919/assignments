@@ -119,8 +119,10 @@ Copy
 http://<your-server-ip> 
  
 
-This setup is ideal for deploying single-page applications (SPAs) like those built with React, Vue, or Angular, using Apache as a simple static file server. 
+This setup is ideal for deploying single-page applications (SPAs) like those built with React, Vue, or Angular, using Apache as a simple static file server..
 
  
 
-9.Final Output: 
+9.Final Output:
+
+![](./img/Screenshot%20(2).png)
