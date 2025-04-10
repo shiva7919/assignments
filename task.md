@@ -4,11 +4,12 @@ Brief Documentation for Building & Deploying a Java Maven Web App on Ubuntu
 
 1. Update the system
    
-'''bash 
+```bash 
 
 Copy 
 
-sudo apt update'''
+sudo apt update
+```
  
 2. Set hostname for the build environment 
 
