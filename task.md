@@ -1,6 +1,6 @@
-Brief Documentation for Building & Deploying a Java Maven Web App on Ubuntu 
+## ** Brief Documentation for Building & Deploying a Java Maven Web App on Ubuntu **
 
-📌 System & Environment Setup 
+### **📌 System & Environment Setup **
 
 1. Update the system
    
@@ -21,12 +21,12 @@ sudo hostnamectl set-hostname pet-clinic_java-build
 sudo init 6
 ```
 
-# Reboot to apply hostname change 
+## **Reboot to apply hostname change **
  
 
  
 
-📁 Clone the Project Repository 
+## **📁 Clone the Project Repository **
 
 3. Clone the JPetStore Project 
 
@@ -50,7 +50,7 @@ sudo apt install tree
 tree
 ```
  
-⚙️ Install Java and Maven 
+## **⚙️ Install Java and Maven ** 
 
 5. Install Java JDK 11 
 
@@ -75,7 +75,7 @@ mvn -v
  
 
 
-🏗️ Build the Application 
+## **🏗️ Build the Application ** 
 
 7. Validate and Package the Application 
 
@@ -91,7 +91,7 @@ mvn package
 This generates a .war (Web Application Archive) file inside the target/ directory. 
 
  
- 🌐 Install and Configure Apache Tomcat 
+## ** 🌐 Install and Configure Apache Tomcat **
 
 8. Download and Extract Tomcat 
 
@@ -125,7 +125,7 @@ curl http://54.196.150.129:8080/manager
 ```
  
 
- 🔐 Configure Tomcat Authentication 
+ ## ** 🔐 Configure Tomcat Authentication **
 
 11. Modify the context.xml files to allow remote access to the Tomcat Manager 
 
@@ -157,7 +157,7 @@ Copy
 <user username="admin" password="admin123" roles="manager-gui,admin-gui"/> 
  
 
-📦 Deploy the WAR File 
+## ** 📦 Deploy the WAR File **
 
 13. Copy WAR file to Tomcat’s webapps/ directory 
 
@@ -178,7 +178,7 @@ ls ~/jpetstore-6/target/apache-tomcat-9.0.102/webapps/
 ```
  
 
-✅ Test the Application 
+## ** ✅ Test the Application ** 
 
 Access the deployed application in a browser: 
 
@@ -208,11 +208,11 @@ cd ~/jpetstore-6/target/apache-tomcat-9.0.102/logs/
 cat catalina.out
 ```
 
-Final OutPut: 
+## ** Final OutPut: ** 
 
 ![Image](https://github.com/user-attachments/assets/c1708ca1-977b-4eeb-babe-8f72dfa407f9)
  
 
-Conclusion 
+## ** Conclusion ** 
 
 This process successfully builds and deploys the Pet-Clinic application using Java, Maven, and Apache Tomcat on an Ubuntu system. Following these steps ensures that you have all the required tools installed and that the application is running smoothly on the server. 
