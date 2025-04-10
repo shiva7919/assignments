@@ -1,123 +1,131 @@
-Brief Documentation for Building & Deploying a Java Maven Web App on Ubuntu 
+## ** Brief Documentation for Building & Deploying a Java Maven Web App on Ubuntu **
 
-📌 System & Environment Setup 
+### **📌 System & Environment Setup **
 
-1. Update the system 
-
-bash 
+1. Update the system
+   
+```bash 
 
 Copy 
 
-sudo apt update 
+sudo apt update
+```
  
-
 2. Set hostname for the build environment 
 
-bash 
+```bash 
 
 Copy 
 
 sudo hostnamectl set-hostname pet-clinic_java-build 
-sudo init 6  
+sudo init 6
+```
 
-# Reboot to apply hostname change 
+## **Reboot to apply hostname change **
  
 
  
 
-📁 Clone the Project Repository 
+## **📁 Clone the Project Repository **
 
 3. Clone the JPetStore Project 
 
-bash 
+```bash 
 
 Copy 
 
 git clone https://github.com/shiva7919/jpetstore-6.git 
-cd jpetstore-6/ 
+cd jpetstore-6/
+```
 
  
 4. View project structure 
 
-bash 
+```bash 
 
 Copy 
 
 ls 
 sudo apt install tree 
-tree 
+tree
+```
  
-⚙️ Install Java and Maven 
+## **⚙️ Install Java and Maven ** 
 
 5. Install Java JDK 11 
 
-bash 
+```bash 
 
 Copy 
 
 sudo apt install openjdk-11-jdk 
-java -version 
+java -version
+```
  
 
 6. Install Maven 
 
-bash 
+```bash 
 
 Copy 
 
 sudo apt install maven 
-mvn -v 
+mvn -v
+```
  
 
 
-🏗️ Build the Application 
+## **🏗️ Build the Application ** 
 
 7. Validate and Package the Application 
 
-bash 
+```bash 
 
 Copy 
 
 mvn validate 
-mvn package 
+mvn package
+```
  
 
 This generates a .war (Web Application Archive) file inside the target/ directory. 
 
  
- 🌐 Install and Configure Apache Tomcat 
+## ** 🌐 Install and Configure Apache Tomcat **
 
 8. Download and Extract Tomcat 
 
-bash 
+```bash 
 
 Copy 
 
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.102/bin/apache-tomcat-9.0.102.tar.gz 
 tar -xvf apache-tomcat-9.0.102.tar.gz 
 cd apache-tomcat-9.0.102/ 
- 
+ ```
 
 9. Start Tomcat 
 
-bash 
+```bash 
 
 Copy 
 
 cd bin 
-./startup.sh 
+./startup.sh
+```
  
 
 10. Check Tomcat is Running 
 
-bash 
+```bash 
 
 Copy 
 
-curl http://54.196.150.129:8080/manager 
+curl http://54.196.150.129:8080/manager
+```
  
 
- 🔐 Configure Tomcat Authentication 
+ ## ** 🔐 Configure Tomcat Authentication **
 
 11. Modify the context.xml files to allow remote access to the Tomcat Manager 
 
@@ -130,7 +138,7 @@ Files edited:
 
 12. Add User Roles in tomcat-users.xml 
 
-bash 
+```bash 
 
 Copy 
 
@@ -141,7 +149,7 @@ sudo vi tomcat-users.xml
 Add the following inside <tomcat-users>: 
 
 Xml 
-
+```
 Copy 
 
 <role rolename="manager-gui"/> 
@@ -149,27 +157,28 @@ Copy
 <user username="admin" password="admin123" roles="manager-gui,admin-gui"/> 
  
 
-📦 Deploy the WAR File 
+## ** 📦 Deploy the WAR File **
 
 13. Copy WAR file to Tomcat’s webapps/ directory 
 
-bash 
+```bash 
 
 Copy 
 
 cp -r ~/jpetstore-6/target/*.war ~/jpetstore-6/target/apache-tomcat-9.0.102/webapps/ 
- 
+ ```
 
 14. Verify Deployment 
 
-bash 
+```bash 
 
 Copy 
 
-ls ~/jpetstore-6/target/apache-tomcat-9.0.102/webapps/ 
+ls ~/jpetstore-6/target/apache-tomcat-9.0.102/webapps/
+```
  
 
-✅ Test the Application 
+## ** ✅ Test the Application ** 
 
 Access the deployed application in a browser: 
 
@@ -182,26 +191,28 @@ http://54.196.150.129:8080/jpetstore
 
 15. Check if Tomcat is Running 
 
-bash 
+```bash 
 
 Copy 
 
-ps -ef | grep tomcat 
+ps -ef | grep tomcat
+```
 
  16. Tomcat Logs 
 
-bash 
+```bash 
 
 Copy 
 
 cd ~/jpetstore-6/target/apache-tomcat-9.0.102/logs/ 
-cat catalina.out 
+cat catalina.out
+```
 
-Final OutPut: 
+## ** Final OutPut: ** 
 
 ![Image](https://github.com/user-attachments/assets/c1708ca1-977b-4eeb-babe-8f72dfa407f9)
  
 
-Conclusion 
+## ** Conclusion ** 
 
 This process successfully builds and deploys the Pet-Clinic application using Java, Maven, and Apache Tomcat on an Ubuntu system. Following these steps ensures that you have all the required tools installed and that the application is running smoothly on the server. 
