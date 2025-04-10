@@ -13,12 +13,13 @@ sudo apt update
  
 2. Set hostname for the build environment 
 
-bash 
+```bash 
 
 Copy 
 
 sudo hostnamectl set-hostname pet-clinic_java-build 
-sudo init 6  
+sudo init 6
+```
 
 # Reboot to apply hostname change 
  
@@ -29,44 +30,48 @@ sudo init 6
 
 3. Clone the JPetStore Project 
 
-bash 
+```bash 
 
 Copy 
 
 git clone https://github.com/shiva7919/jpetstore-6.git 
-cd jpetstore-6/ 
+cd jpetstore-6/
+```
 
  
 4. View project structure 
 
-bash 
+```bash 
 
 Copy 
 
 ls 
 sudo apt install tree 
-tree 
+tree
+```
  
 ⚙️ Install Java and Maven 
 
 5. Install Java JDK 11 
 
-bash 
+```bash 
 
 Copy 
 
 sudo apt install openjdk-11-jdk 
-java -version 
+java -version
+```
  
 
 6. Install Maven 
 
-bash 
+```bash 
 
 Copy 
 
 sudo apt install maven 
-mvn -v 
+mvn -v
+```
  
 
 
@@ -74,12 +79,13 @@ mvn -v
 
 7. Validate and Package the Application 
 
-bash 
+```bash 
 
 Copy 
 
 mvn validate 
-mvn package 
+mvn package
+```
  
 
 This generates a .war (Web Application Archive) file inside the target/ directory. 
@@ -89,32 +95,34 @@ This generates a .war (Web Application Archive) file inside the target/ director
 
 8. Download and Extract Tomcat 
 
-bash 
+```bash 
 
 Copy 
 
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.102/bin/apache-tomcat-9.0.102.tar.gz 
 tar -xvf apache-tomcat-9.0.102.tar.gz 
 cd apache-tomcat-9.0.102/ 
- 
+ ```
 
 9. Start Tomcat 
 
-bash 
+```bash 
 
 Copy 
 
 cd bin 
-./startup.sh 
+./startup.sh
+```
  
 
 10. Check Tomcat is Running 
 
-bash 
+```bash 
 
 Copy 
 
-curl http://54.196.150.129:8080/manager 
+curl http://54.196.150.129:8080/manager
+```
  
 
  🔐 Configure Tomcat Authentication 
@@ -130,7 +138,7 @@ Files edited:
 
 12. Add User Roles in tomcat-users.xml 
 
-bash 
+```bash 
 
 Copy 
 
@@ -141,7 +149,7 @@ sudo vi tomcat-users.xml
 Add the following inside <tomcat-users>: 
 
 Xml 
-
+```
 Copy 
 
 <role rolename="manager-gui"/> 
@@ -153,20 +161,21 @@ Copy
 
 13. Copy WAR file to Tomcat’s webapps/ directory 
 
-bash 
+```bash 
 
 Copy 
 
 cp -r ~/jpetstore-6/target/*.war ~/jpetstore-6/target/apache-tomcat-9.0.102/webapps/ 
- 
+ ```
 
 14. Verify Deployment 
 
-bash 
+```bash 
 
 Copy 
 
-ls ~/jpetstore-6/target/apache-tomcat-9.0.102/webapps/ 
+ls ~/jpetstore-6/target/apache-tomcat-9.0.102/webapps/
+```
  
 
 ✅ Test the Application 
@@ -182,20 +191,22 @@ http://54.196.150.129:8080/jpetstore
 
 15. Check if Tomcat is Running 
 
-bash 
+```bash 
 
 Copy 
 
-ps -ef | grep tomcat 
+ps -ef | grep tomcat
+```
 
  16. Tomcat Logs 
 
-bash 
+```bash 
 
 Copy 
 
 cd ~/jpetstore-6/target/apache-tomcat-9.0.102/logs/ 
-cat catalina.out 
+cat catalina.out
+```
 
 Final OutPut: 
 
