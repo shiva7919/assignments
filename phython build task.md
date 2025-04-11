@@ -185,4 +185,6 @@ Step 5: Troubleshooting
 
 You can now visit your app at http://127.0.0.1:5000 and interact with it. Feel free to modify the code, customize the app, or deploy it to a production environment.
 
-![Image]()
+![Image](https://github.com/user-attachments/assets/035469f1-a180-49f1-8858-1e16abaf2368)
+
+![Image](https://github.com/user-attachments/assets/1c16b2dd-dc1b-4e83-a9fc-be6b7029e0dd)
