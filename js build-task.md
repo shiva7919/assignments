@@ -1,8 +1,11 @@
-🚀 Deployment Guide: JavaScript Application on Ubuntu (Using Node.js, npm, and Apache) 
 
+## **MY CODE REPO :https://github.com/shiva7919/assignments/projects
+
+## **🚀 Deployment Guide: JavaScript Application on Ubuntu (Using Node.js, npm, and Apache) **
+https://github.com/shiva7919/assignments/projects
 This guide walks you through the process of building and deploying a JavaScript web application on an Ubuntu Linux server using Node.js, npm, and the Apache web server. The application will be pulled from a GitHub repository and deployed as a static website. 
 
-📋 Prerequisites 
+### **📋 Prerequisites ** 
 
 Before you begin, ensure you have: 
 
@@ -16,113 +19,114 @@ A GitHub repository with a frontend JavaScript project (e.g., React, Vue)
 
  
 
-🔧 Step-by-Step Instructions 
+## ** 🔧 Step-by-Step Instructions ** 
 
-1. Switch to the Root User 
+## **1. Switch to the Root User **
 
 Gain administrative privileges for installing and configuring software: 
 
-bash 
+```bash 
 
 Copy 
 
-sudo -i 
+sudo -i
+```
  
 
-2. Install Essential Packages 
+## ** 2. Install Essential Packages **
 
 Install git to clone the project and npm to manage dependencies and build the app: 
 
-bash 
+```bash 
 
 Copy 
 
 apt update 
 apt install git -y 
-apt install npm -y 
+apt install npm -y
+```
  
-3. Clone the GitHub Repository 
+## **3. Clone the GitHub Repository ** 
 
 Download the project from your GitHub repository: 
 
-bash 
+```bash 
 
 Copy 
 
 cd ~/ 
 git clone https://github.com/shiva7919/Portfolio-Website.git 
-cd Portfolio-Website/ 
+cd Portfolio-Website/
+```
  
-4. Install Project Dependencies 
+## **4. Install Project Dependencies ** 
 
 Use npm to install all required packages listed in package.json: 
 
-bash 
+```bash 
 
 Copy 
 
-npm install 
+npm install
+```
  
-5. Build the Project 
+## **5. Build the Project ** 
 
 Build the app for production. This generates optimized static files in the build/ directory: 
 
-bash 
+```bash 
 
 Copy 
 
-npm run build 
+npm run build
+```
  
-6. Install Apache Web Server 
+## **6. Install Apache Web Server **
 
 Install Apache to serve the static files: 
 
-bash 
+```bash 
 
 Copy 
 
-apt install apache2 -y 
+apt install apache2 -y
+```
  
- 7. Deploy the Build to Apache’s Web Root 
+ ## **7. Deploy the Build to Apache’s Web Root **
 
 Clear the default Apache content and copy your built files: 
 
-bash 
+```bash 
 
 Copy 
 
 cd /var/www/html/ 
 rm -rf * 
-cp -r ~/Portfolio-Website/build/* . 
+cp -r ~/Portfolio-Website/build/* .
+```
  
 
-8. Restart Apache to Apply Changes 
+## **8. Restart Apache to Apply Changes **
 
 Reload the Apache server to serve your newly deployed app: 
 
-bash 
+```bash 
 
 Copy 
 
-systemctl restart apache2 
+systemctl restart apache2
+```
  
-✅ Conclusion 
+## **✅ Conclusion **
 
 Your JavaScript application is now successfully built and deployed on your Ubuntu server. It is being served via Apache as a static site. 
 
 You can access your application by entering your server's IP address or domain name in a web browser: 
 
-cpp 
-
-Copy 
-
-http://<your-server-ip> 
- 
-
 This setup is ideal for deploying single-page applications (SPAs) like those built with React, Vue, or Angular, using Apache as a simple static file server..
 
  
 
-9.Final Output:
+## ** 9.Final Output: **
 
 ![](./img/Screenshot%20(2).png)
