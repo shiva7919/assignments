@@ -1,6 +1,3 @@
-
-## **MY CODE REPO :https://github.com/shiva7919/assignments/projects
-
 ## **🚀 Deployment Guide: JavaScript Application on Ubuntu (Using Node.js, npm, and Apache) **
 https://github.com/shiva7919/assignments/projects
 This guide walks you through the process of building and deploying a JavaScript web application on an Ubuntu Linux server using Node.js, npm, and the Apache web server. The application will be pulled from a GitHub repository and deployed as a static website. 
