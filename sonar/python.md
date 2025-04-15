@@ -115,3 +115,7 @@ Python Voting App
 SonarQube Server
 
 SonarScanner for code analysis
+
+![Image](https://github.com/user-attachments/assets/d6672613-3202-4691-b5a0-1ed3b00466f1)
+![Image](https://github.com/user-attachments/assets/de185ca6-1277-4999-b910-c5740de2ada0)
+![Image](https://github.com/user-attachments/assets/52d506c0-9130-40d9-bef9-1bc52da5acad)
