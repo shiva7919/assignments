@@ -1,9 +1,8 @@
 
-1. # DevOps Project Setup: Maven Build + Nexus Repository
+# DevOps Project Setup: Maven Build + Nexus Repository
 
-2.Nexus Repository Setup (ubuntu@nexus)
-
-3.Create an instance for Nexus with All trafic security or create a bound rule with port 9000.
+Nexus Repository Setup (ubuntu@nexus)
+Create an instance for Nexus with All trafic security or create a bound rule with port 9000.
 
 Connect the instance to the terminal.
 
